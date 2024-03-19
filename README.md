@@ -6,6 +6,10 @@ This is an individual assessment. All work must be your own. You will also be gi
 
 ### Prerequisites
 
+username:rahul
+password:rahul@2021
+
+
 #### UI Prerequisites
 
 <details>
