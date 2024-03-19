@@ -1,0 +1,70 @@
+.restaurant-item {
+  height: 120px;
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  cursor: pointer;
+  margin-left: 0;
+}
+.restaurant-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 80%;
+
+  width: 150px;
+  padding-left: 10px;
+}
+.restaurant-image {
+  width: 180px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.restaurant-head {
+  font-family: 'DM Sans' sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.restaurant-para {
+  font-family: 'DM Sans' sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #64748b;
+  margin-left: 0;
+}
+.restaurant-para2 {
+  font-family: 'DM Sans' sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #64748b;
+}
+.rating-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20px;
+  width: 80%;
+}
+
+.rating-head {
+  font-family: 'DM Sans' sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1e293b;
+}
+.rating-head::before {
+  content: url('https://res.cloudinary.com/digbzwlfx/image/upload/c_thumb,w_200,g_face/v1704119859/7_Rating_medwqf.svg');
+}
+.rest-link {
+  text-decoration: none;
+}

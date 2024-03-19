@@ -1,0 +1,137 @@
+.food-item-detailed {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 450px;
+  height: 150px;
+  margin: auto;
+}
+.food-item-img {
+  height: 100%;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 130px;
+
+  width: 200px;
+  position: relative;
+  margin-left: 20px;
+}
+.detail-para {
+  font-family: 'DM Sans';
+  font-size: 18px;
+  font-weight: 700;
+  /*letter-spacing: 0.20000000298023224px;*/
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.detail-para2 {
+  font-family: 'DM Sans' sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #334155;
+  position: absolute;
+  top: 33px;
+  left: 5;
+}
+.span {
+  position: absolute;
+  top: 33px;
+  left: 0;
+}
+.detail-para3 {
+  font-family: 'DM Sans' sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  color: #0a1f44;
+}
+.buttonAdd {
+  width: 58px;
+  height: 28px;
+  padding: 8px, 16px, 8px, 16px;
+  border-radius: 8px;
+  border: 2px;
+  gap: 8px;
+  border: 2px solid #ffa412;
+  color: #ffa412;
+  background-color: transparent;
+  position: absolute;
+  bottom: 8px;
+  cursor: pointer;
+  outline: none;
+}
+.detail-para3::before {
+  content: url('https://res.cloudinary.com/digbzwlfx/image/upload/v1704119859/7_Rating_medwqf.svg');
+  alt: 'star';
+  margin-right: 2px;
+}
+.cart-btn1 {
+  height: fit-content;
+  width: fit-content;
+  padding-left: 0;
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+.cart-btn2 {
+  height: fit-content;
+  width: fit-content;
+  padding-left: 0px;
+  bottom: 8px;
+  left: 40px;
+  position: absolute;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+.added {
+  position: absolute;
+  bottom: 0px;
+  left: 34px;
+}
+
+@media screen and (min-width: 768px) {
+  .food-item-detailed {
+    width: 300px;
+  }
+  .food-item-img {
+    width: 150px;
+  }
+  .detail-para {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .food-item-detailed {
+    width: 450px;
+  }
+  .food-item-img {
+    width: 200px;
+  }
+  .detail-para {
+    font-size: 18px;
+  }
+}

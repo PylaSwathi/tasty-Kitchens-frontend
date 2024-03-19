@@ -1,0 +1,142 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.restaurantDetailed-top-container {
+  background-image: url('https://res.cloudinary.com/digbzwlfx/image/upload/v1704369907/Frame_279_khy7sx.png');
+  height: 360px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.restaurant-item-img {
+  height: 80%;
+  width: 180px; /*400px in big screen*/
+  margin: auto;
+  object-fit: cover;
+  margin-right: 0px;
+  margin-left: 0; /* 5% */
+  border-bottom-right-radius: 130px;
+  border-top-right-radius: 130px;
+}
+.restaurant-details-cont {
+  height: 70%;
+  margin: auto;
+  display: flex;
+  margin-left: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20px;
+  gap: 0;
+}
+.r-head1 {
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  color: white;
+  margin: 5px;
+}
+.r-para1 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 5px;
+}
+.r-para3 {
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 5px;
+}
+.r-para2 {
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #e2e8f0;
+  margin: 5px;
+}
+
+.rating-right {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.rating-2 {
+  display: flex;
+  flex-direction: column;
+  height: 45px;
+  width: 100px;
+  padding: 0;
+  gap: 0;
+  position: relative;
+  border-right: 2px solid #e2e8f0;
+}
+.rating-3 {
+  display: flex;
+  flex-direction: column;
+  height: 45px;
+  padding: 0;
+  gap: 0;
+  position: relative;
+  margin-left: 10px;
+}
+.star::before {
+  content: url('https://res.cloudinary.com/digbzwlfx/image/upload/v1704387486/7_Rating_o1ulgv.svg');
+  alt: 'rating';
+  margin-right: 5px;
+  height: 12px;
+}
+.star {
+  font-size: 12px;
+}
+.marg {
+  margin-top: 0px;
+  position: absolute;
+  left: 0;
+  top: 23px;
+  white-space: nowrap;
+}
+.line {
+  height: 35px;
+  border: 1px solid #e2e8f0;
+  width: 1px;
+  transform: translate(-150%, -50%);
+}
+.food-items {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-item-img {
+    height: 70%;
+    width: 400px;
+    margin: auto;
+    object-fit: cover;
+    margin-right: 0px;
+    margin-left: 5%;
+    border-radius: 5px;
+  }
+
+  .food-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,85 @@
+.container {
+  background: white;
+  max-height: 320px;
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.carousal-image {
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+
+.error-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  padding-bottom: 64px;
+}
+
+.failure-img {
+  width: 250px;
+  height: 200px;
+}
+.failure-heading-text {
+  color: #171f46;
+  font-family: 'DM Sans' sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.failure-description {
+  text-align: center;
+  color: #64748b;
+  font-family: 'DM Sans' sans-serif;
+  font-size: 14px;
+  width: 90%;
+  max-width: 288px;
+  line-height: 1.3;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.ul-list {
+  padding: 0;
+}
+
+.slick-slide img {
+  margin: auto;
+}
+
+.slick-dots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 10px; /* Adjust the bottom position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.slick-dot {
+  margin: 0 5px;
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.carousals-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
