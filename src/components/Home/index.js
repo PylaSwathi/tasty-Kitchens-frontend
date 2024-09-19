@@ -52,8 +52,8 @@ class Home extends Component {
     const limit = 9
     const offset = (activePage - 1) * limit
     const search = ''
-    const apiUrl = `https://apis.ccbp.in/restaurants-list?offset=${offset}&limit=9&sort_by_rating=${activeOptionId}&search=${search}`
-
+    const apiUrl = `http://localhost:9092/api/restaurants/restaurants-list?offset=${offset}&limit=9&sortByRating=${activeOptionId}`
+    const apiUrl2 = `https://apis.ccbp.in/restaurants-list?offset=${offset}&limit=9&sort_by_rating=${activeOptionId}&search=${search}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -61,31 +61,32 @@ class Home extends Component {
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
-    console.log(response)
+    console.log('r', response)
     if (response.ok === true) {
       const data = await response.json()
-      // console.log(data)
-      const {restaurants, total} = data
-      const updatedRestaurants = restaurants.map(each => ({
+      console.log('d', data)
+      // const {restaurants, total} = data
+      const updatedRestaurants = data.map(each => ({
         id: each.id,
-        imageUrl: each.image_url,
+        imageUrl: each.imageUrl,
         name: each.name,
-        userRating: each.user_rating,
-        menuType: each.menu_type,
+        userRating: each.rating,
+        menuType: each.menuType,
+        totalReviews: each.totalReviews, // added
       }))
-      const updated = updatedRestaurants.map(each => ({
-        ...each,
-        userRating: {
-          rating: each.userRating.rating,
-          totalReviews: each.userRating.total_reviews,
-        },
-      }))
-      console.log(updated)
+      // const updated = updatedRestaurants.map(each => ({
+      //   ...each,
+      //   userRating: {
+      //     rating: each.userRating.rating,
+      //     totalReviews: each.userRating.total_reviews,
+      //   },
+      // }))
+      console.log('updated', updatedRestaurants)
 
       this.setState({
         apiStatus: apiStatusConstants.success,
-        restaurants: updated,
-        total,
+        restaurants: updatedRestaurants,
+        total: 30,
       })
     } else {
       this.setState({apiStatus: apiStatusConstants.failure})

@@ -1,6 +1,6 @@
 .nav-bar-container {
   height: 64px;
-  width: 100vw;
+  /* width: 100vw; */
   background-color: #f8fafc;
   display: flex;
   flex-direction: column;

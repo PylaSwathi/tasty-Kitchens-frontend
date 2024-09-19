@@ -19,13 +19,8 @@ class LoginPage extends Component {
     this.setState({password: event.target.value})
   }
 
-  onSubmitSuccess = jwtToken => {
+  onSubmitSuccess = () => {
     const {history} = this.props
-
-    Cookies.set('jwt_token', jwtToken, {
-      expires: 30,
-      path: '/',
-    })
     history.replace('/')
   }
 
@@ -37,16 +32,21 @@ class LoginPage extends Component {
     event.preventDefault()
     const {username, password} = this.state
     const userDetails = {username, password}
-    const url = 'https://apis.ccbp.in/login'
+    const url = 'http://localhost:9092/api/users/login' // Update with your Spring Boot login URL
     const options = {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(userDetails),
+      credentials: 'include', // This will allow cookies to be sent with the request
     }
     const response = await fetch(url, options)
-    const data = await response.json()
+    console.log('r', response)
     if (response.ok === true) {
-      this.onSubmitSuccess(data.jwt_token)
+      this.onSubmitSuccess() // Redirect on success
     } else {
+      const data = await response.json()
       this.onSubmitFailure(data.error_msg)
     }
   }
